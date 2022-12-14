@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+    {% block title %} Suas senhas {% endblock %}
+
+    {% load static %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'pwd.css' %}">
+        <script type=text/javascript src="{% static 'js/pwd.js' %}"></script>
+    {% endblock %}
+
+    {% block page %}
+    <div class="view">
+        <div class="side-bar">
+            <h2 class="side-bar-title">Senhas de {{ user.username }}:</h2>
+                {% for item in file %}
+                    <div class="list-item" onclick="setPreview('{{ item.1 }}')">
+                        <i class="fa-solid fa-key"></i><a> {{ item.0.title }} </a>
+                    </div>
+                {% endfor %}
+            <div class="list-item" onclick="cleanPreview()">
+                <i class="fa-solid fa-key"></i> Nova senha
+            </div>
+        </div>
+
+        <div class="view-pwd">
+            <button class="btn-download" onclick="location.href='download/'">
+                Donwload DB <i class="fa-solid fa-cloud-arrow-down fa-xg"></i>
+            </button>
+            <h2 id="tpage"> Senhas </h2>
+
+            <div class="pwd-details">
+                <form method="POST" id="form" action="/pwd/add/">
+                    {% csrf_token %}
+                    {{ form.title }}
+                    {{ form.username }}
+                    <div class="div-input-pwd">
+                        {{ form.password }}
+                        <button type="button" onclick="copyPassword()" class="btn-input-copy-pwd">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    {{ form.url }}<br>
+                    <input type="submit" value="Salvar">
+                    <input type="submit" value="Deletar" id="delBtn" formaction="del/">
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+    {% block title %} Sobre PyPassword {% endblock %}
+
+    {% block page %}
+
+        <h1> Sobre:</h1>
+        <h3> Projeto de Api para gerenciar senhas feita com Django, Postgresql e pykeepass</h3>
+        <h3> Permite salvar senhas em um arquivo criptografado com senha e gerar senhas aleatorias</h3>
+        <h2> Estrutura: </h2>
+        <p style="text-align: center;"><a href="/">/</a> Pagina inicial ['GET']</p>
+        <p style="text-align: center;"><a href="/about">/about</a> Pagina sobre o projeto ['GET']</p>
+        <p style="text-align: center;"><a href="/users/login">/login</a> Pagina de login e cadastro ['GET', 'POST']</p>
+        <p style="text-align: center;"><a href="/pwd/">/pwd/</a> Pagina do gerenciador de senhas ['GET', 'POST']</p>
+        <p style="text-align: center;"><a href="/pwd/new">/pwd/new</a> Pagina para gerar senhas randomicas ['GET', 'POST']</p>
+
+
+
+
+    {% endblock %}

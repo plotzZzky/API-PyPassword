@@ -1,0 +1,174 @@
+.view {
+    width: 96%;
+    height: 83vh;
+    margin: auto;
+    margin-bottom: 2%;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1);
+}
+
+.side-bar {
+    float: left;
+    width: 16%;
+    height: 100%;
+    margin: auto;
+    margin-left: 0;
+    background-color: #333;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.side-bar-title {
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    padding-left: 8px;
+
+}
+
+.list-item {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    padding-left: 64px;
+}
+
+.list-item i {
+    padding-right: 8px;
+}
+
+.list-item a {
+    font-size: 20px;
+
+}
+
+.view-pwd {
+    float: right;
+    width: 84%;
+    height: 83vh;
+    margin: auto;
+    margin-top: 0;
+    float: right;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1);
+}
+
+.btn-download {
+    width: 10%;
+    height: 32px;
+    top: 100px;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 90%;
+    margin-right: 0;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.pwd-details {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text],
+input[type=url] {
+    width: 80%;
+    height: 32px;
+    margin: 1%;
+}
+
+input[type=submit] {
+    width: 10%;
+    height: auto;
+    margin: 2%;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+}
+
+.div-input-pwd {
+    width: 80.6%;
+    height: 32px;
+    margin: 1%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#password {
+    flex-grow: 20;
+    margin: 0;
+}
+
+.btn-input-copy-pwd {
+    flex-grow: 1;
+    height: 38px;
+}
+
+.copy-btn {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+}
+
+/* generate.html */
+
+
+.div-form {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+#length {
+    width: 99%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+#id_option {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 16px;
+    padding: 2px;
+    margin-bottom: 32px;
+}
+
+#generate-btn {
+    width: 12%;
+    height: 32px;
+    font-size: 16px;
+}
+
+.div-pwd {
+    width: auto;
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pwd {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+#input-pwd-db {
+    width: 80%;
+    height: 32px;
+    margin: 2%;
+    border-radius: 4px;
+    border: 2px solid grey;
+}

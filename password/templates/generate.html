@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+    {% block title %} Gerar senha {% endblock %}
+
+    {% load static %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'pwd.css' %}">
+        <script type=text/javascript src="{% static 'js/pwd.js' %}"></script>
+    {% endblock %}
+
+    {% block page %}
+        <h2 class="title"> Criar senha: </h2>
+
+        <div class="div-form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.length }}
+                {{ form.option }}<br>
+                <button type="submit" id="generate-btn"> Criar <i class="fa-solid fa-key"></i></button>
+            </form>
+        </div>
+
+        {% if pwd %}
+            <div class="div-pwd">
+                <p id="pwd"> {{ pwd }} </p>
+                <button class="copy-btn" onclick="copyPwd('pwd')"><i class="fa-regular fa-copy fa-lg"></i> </button>
+            </div>
+        {% endif %}
+    {% endblock %}
