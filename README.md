@@ -16,3 +16,7 @@
 - [x] Permite criar, editar e deletar senhas;
 - [x] Sistema de login;
 - [ ] melhorias em breve...
+
+
+### Importante:
+- É necessario um servidor PostgreSql funcionando
