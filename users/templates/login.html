@@ -5,7 +5,7 @@
     {% load static %}
     {% block css %}
         <link rel="stylesheet" href="{% static 'login.css' %}">
-        <script type=text/javascript src="{% static 'js/login.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
     {% endblock %}
 
     {% block page %}
@@ -15,7 +15,7 @@
               <button  class="tablinks" onclick="show_signup(this)"> Cadastrar </button>
             </div>
             <div style="display: block;" class="login-tab" id="Login">
-                <form name="login-form" onsubmit="return validLogin(this)" method="POST" action="/users/login/">
+                <form name="login-form" method="POST" action="/users/login/">
                     {% csrf_token %}
                         {{ login.username }}
                         {{ login.password }}
@@ -24,7 +24,7 @@
             </div>
 
             <div class="login-tab" id="Signup">
-                <form onsubmit="return validSignup(this)" method="POST" action="/users/register/">
+                <form  method="POST" action="/users/register/">
                     {% csrf_token %}
                     {{ signup.username }}
                     {{ signup.email }}
